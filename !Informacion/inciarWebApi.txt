@@ -1,0 +1,5 @@
+// para inciar astro escribe en consola:
+npm run dev
+
+// una vez todo inicie debe escribir en el navegador:
+http://localhost:4321

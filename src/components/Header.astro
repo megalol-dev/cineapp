@@ -1,0 +1,95 @@
+---
+/*
+Componente Header global de la aplicación.
+
+Funciones:
+- Mostrar el logo principal.
+- Mostrar la navegación principal.
+- Acceso a Inicio.
+- Acceso a Mi Lista.
+- Mostrar el menú de categorías.
+- Gestionar elementos de navegación global.
+
+Se carga automáticamente desde
+MainLayout.astro.
+*/
+---
+
+<header class="header">
+    <!-- ARRIBA - OPCIONES -->
+    <nav class="nav nav-left">
+        <a href="/"> 🏠 Inicio </a>
+
+        <a href="/favoritos"> ❤️ Mi lista </a>
+    </nav>
+
+    <!-- CENTRO - LOGOTIPO -->
+    <a href="/" class="logo"> 🎬 ¿QUÉ PELÍCULA VER? </a>
+
+    <!-- ABAJO - MENU DE BUSCAR CATEGORIAS -->
+    <div class="categories-dropdown">
+        <button class="categories-button" id="categoriesBtn">
+            🎞 Categorías
+        </button>
+
+        <!-- LISTA DE TODAS LAS CATEGORIAS -->
+        <div class="dropdown-content">
+            <a href="/categoria/accion?id=28">Acción</a>
+
+            <a href="/categoria/aventura?id=12">Aventura</a>
+
+            <a href="/categoria/animacion?id=16">Animación</a>
+
+            <a href="/categoria/comedia?id=35">Comedia</a>
+
+            <a href="/categoria/crimen?id=80">Crimen</a>
+
+            <a href="/categoria/documental?id=99">Documental</a>
+
+            <a href="/categoria/drama?id=18">Drama</a>
+
+            <a href="/categoria/familiar?id=10751">Familiar</a>
+
+            <a href="/categoria/fantasia?id=14">Fantasía</a>
+
+            <a href="/categoria/historia?id=36">Historia</a>
+
+            <a href="/categoria/terror?id=27">Terror</a>
+
+            <a href="/categoria/musica?id=10402">Música</a>
+
+            <a href="/categoria/misterio?id=9648">Misterio</a>
+
+            <a href="/categoria/romance?id=10749">Romance</a>
+
+            <a href="/categoria/ciencia-ficcion?id=878"> Ciencia Ficción </a>
+
+            <a href="/categoria/pelicula-tv?id=10770"> Película TV </a>
+
+            <a href="/categoria/thriller?id=53"> Thriller </a>
+
+            <a href="/categoria/belica?id=10752"> Bélica </a>
+
+            <a href="/categoria/western?id=37"> Western </a>
+        </div>
+    </div>
+
+    <!-- JS - MANEJA LOS EVENTOS DEL BOTONES CATEGORIAS-->
+    <script>
+        const categoriesBtn = document.getElementById("categoriesBtn")!;
+        const dropdown = document.querySelector(".dropdown-content")!;
+
+        categoriesBtn.addEventListener("click", () => {
+            dropdown.classList.toggle("show-dropdown");
+        });
+
+        document.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+
+            if (!target.closest(".categories-dropdown")) {
+                dropdown.classList.remove("show-dropdown");
+            }
+        });
+    </script>
+
+</header>

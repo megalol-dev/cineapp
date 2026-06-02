@@ -1,0 +1,41 @@
+---
+/*
+Layout principal de CineApp.
+
+Funciones:
+- Definir la estructura global del sitio.
+- Cargar los estilos globales.
+- Mostrar Header y Footer.
+- Mantener una apariencia consistente
+  en todas las páginas.
+- Renderizar el contenido mediante <slot />.
+
+Utilizado por:
+- index.astro
+- favoritos.astro
+- busqueda.astro
+- categoria/[genero].astro
+- pelicula/[id].astro
+*/
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>¿Qué Película Ver?</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="main-content">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

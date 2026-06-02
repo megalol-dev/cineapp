@@ -1,0 +1,1631 @@
+/* ============================= */
+/* RESET GENERAL */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* ESTILOS GENERALES BODY */
+/* ============================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)),
+        #050505;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 50px;
+    background: rgba(57, 57, 57, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #e50914;
+
+    text-decoration: none;
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 15px;
+}
+
+.nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #e50914;
+}
+
+/* ============================= */
+/* CONTENIDO PRINCIPAL */
+/* ============================= */
+
+.main-content {
+    padding: 40px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.footer {
+    margin-top: 50px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #1b1b1b;
+
+    color: #999;
+}
+
+
+
+/* ============================= */
+/* BUSCADOR */
+/* ============================= */
+
+.search-container {
+    margin-bottom: 40px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.search-container form {
+    display: flex;
+
+    gap: 10px;
+}
+
+.search-container input {
+    width: 300px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #222;
+
+    color: white;
+
+    font-size: 1rem;
+}
+
+.search-container input:focus {
+    outline: none;
+
+    border: 2px solid #555;
+}
+
+.search-container button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #e50914;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #b20710;
+}
+
+/* ============================= */
+/* GRID PELÍCULAS */
+/* ============================= */
+
+.movies-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+/* ============================= */
+/* TARJETAS PELÍCULAS */
+/* ============================= */
+
+.movie-card {
+
+    background:
+        linear-gradient(145deg, #181818, #0b0b0b);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+
+    height: 340px;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: default;
+}
+
+/* ============================= */
+/* CONTENIDO INTERNO TARJETA */
+/* ============================= */
+
+.movie-card-content {
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+.movie-card-content h3 {
+
+    text-align: center;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    line-height: 1.4;
+}
+
+/* ============================= */
+/* BOTONES TARJETAS */
+/* ============================= */
+
+.movie-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+
+    margin-top: auto;
+}
+
+.info-button,
+.watch-button {
+
+    border: none;
+
+    min-width: 120px;
+
+    min-height: 55px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px;
+}
+
+.info-button {
+    background: #ffffff;
+
+    color: #111;
+}
+
+.info-button:hover {
+    background: #d5d5d5;
+}
+
+.watch-button {
+    background: #e50914;
+
+    color: white;
+}
+
+.watch-button:hover {
+    background: #b20710;
+}
+
+/* ============================= */
+/* BOTÓN VOLVER */
+/* ============================= */
+
+.back-button {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    color: white;
+
+    text-decoration: none;
+
+    background-color: #222;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #333;
+}
+
+/* ============================= */
+/* TÍTULOS SECCIONES */
+/* ============================= */
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+/* ============================= */
+/* PAGINACIÓN */
+/* ============================= */
+
+.pagination {
+
+    margin-top: 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.page-button {
+
+    background-color: #e50914;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.page-button:hover {
+    background-color: #b20710;
+}
+
+/* ============================= */
+/* DETALLE PELÍCULA */
+/* ============================= */
+
+.movie-hero-detail {
+
+    display: flex;
+
+    gap: 50px;
+
+    align-items: flex-start;
+
+    background:
+        linear-gradient(135deg, #151515, #050505);
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+.movie-poster-box img {
+
+    width: 320px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.movie-info {
+    max-width: 700px;
+}
+
+.movie-info h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+.movie-info p {
+
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* ETIQUETAS Y META DATOS */
+/* ============================= */
+
+.movie-tag {
+
+    display: inline-block;
+
+    background: #e50914;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.movie-overview {
+
+    font-size: 1.1rem;
+
+    color: #ddd;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.movie-meta {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+.movie-meta span {
+
+    background: #222;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+}
+
+/* ============================= */
+/* BOTÓN VER PELÍCULA GRANDE */
+/* ============================= */
+
+.detail-buttons {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.large-watch-button {
+
+    font-size: 1rem;
+
+    padding: 14px 22px;
+}
+
+/* ============================= */
+/* SECCIÓN TRAILER */
+/* ============================= */
+
+.trailer-section {
+    margin-top: 60px;
+}
+
+.trailer-section h2 {
+
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+}
+
+.trailer-container {
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.trailer-container iframe {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+.no-trailer {
+
+    margin-top: 40px;
+
+    color: #aaa;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px) {
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .movie-hero-detail {
+
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .movie-poster-box img {
+        width: 100%;
+    }
+
+    .movie-info h1 {
+        font-size: 2rem;
+    }
+
+    .movie-buttons {
+
+        flex-direction: column;
+    }
+
+    .info-button,
+    .watch-button {
+
+        width: 100%;
+    }
+
+
+        .header {
+    
+            flex-direction: column;
+    
+            gap: 15px;
+    
+        }
+    
+        .nav-left {
+    
+            order: 1;
+    
+        }
+    
+        .logo {
+    
+            order: 2;
+    
+            font-size: 2rem;
+    
+        }
+    
+        .categories-dropdown {
+    
+            order: 3;
+    
+        }
+
+}
+
+
+
+/* ============================= */
+/* FAVORITOS */
+/* ============================= */
+
+.favorite-button {
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-left: 15px;
+}
+
+.favorite-button:hover {
+
+    background: #d91f46;
+}
+
+
+/* ============================= */
+/* HERO TOP 10 */
+/* ============================= */
+
+.hero-slider {
+
+    position: relative;
+
+    height: 85vh;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    margin-bottom: 60px;
+}
+
+.hero-slide {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+}
+
+.active-slide {
+    opacity: 1;
+
+    z-index: 1;
+}
+
+.hero-overlay {
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            rgba(0, 0, 0, 0.9) 20%,
+            rgba(0, 0, 0, 0.3) 100%);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px;
+}
+
+.hero-content {
+
+    max-width: 700px;
+}
+
+.hero-rank {
+
+    background: #e50914;
+
+    padding: 10px 18px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+}
+
+.hero-content h1 {
+
+    font-size: 4rem;
+
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+}
+
+.hero-stats {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+.hero-stats span {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(5px);
+}
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.hero-info-btn,
+.hero-watch-btn {
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.hero-info-btn {
+
+    background: white;
+
+    color: black;
+}
+
+.hero-info-btn:hover {
+
+    background: #ddd;
+}
+
+.hero-watch-btn {
+
+    background: #e50914;
+
+    color: white;
+}
+
+.hero-watch-btn:hover {
+
+    background: #b20710;
+}
+
+/* ============================= */
+/* RESPONSIVE HERO */
+/* ============================= */
+
+@media(max-width:768px) {
+
+    .hero-slider {
+        height: 75vh;
+    }
+
+    .hero-overlay {
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* ============================= */
+/* MI LISTA */
+/* ============================= */
+
+.remove-favorite-button {
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    min-width: 120px;
+
+    min-height: 55px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    padding: 10px;
+}
+
+.remove-favorite-button:hover {
+
+    background: #d91f46;
+}
+
+.empty-favorites {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+.empty-favorites h2 {
+
+    margin-bottom: 20px;
+}
+
+
+/* ============================= */
+/* HOVER PREMIUM NETFLIX */
+/* ============================= */
+
+.movie-image-container{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    height:100%;
+}
+
+.movie-image-container img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+/* OVERLAY */
+
+.movie-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.95) 15%,
+            rgba(0,0,0,0.5) 50%,
+            rgba(0,0,0,0.1) 100%
+        );
+
+    opacity:0;
+
+    transition:0.4s ease;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:20px;
+}
+
+.overlay-content{
+
+    width:100%;
+
+    transform:translateY(20px);
+
+    transition:0.4s ease;
+}
+
+/* HOVER */
+
+.movie-card:hover .movie-overlay{
+    opacity:1;
+}
+
+.movie-card:hover .overlay-content{
+    transform:translateY(0);
+}
+
+.movie-card:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(0.55);
+}
+
+/* INFO EXTRA */
+
+.overlay-content h3{
+
+    font-size:1.2rem;
+
+    margin-bottom:12px;
+
+    min-height:auto;
+}
+
+.overlay-info{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:15px;
+}
+
+.overlay-info span{
+
+    background:rgba(255,255,255,0.12);
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    font-size:0.9rem;
+
+    backdrop-filter:blur(5px);
+}
+
+.overlay-description{
+
+    font-size:0.9rem;
+
+    color:#ddd;
+
+    line-height:1.5;
+
+    margin-bottom:20px;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:3;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+/* BOTONES OVERLAY */
+
+.movie-overlay .movie-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    width:100%;
+}
+
+.movie-overlay .info-button,
+.movie-overlay .watch-button{
+
+    flex:1;
+
+    min-width:auto;
+
+    min-height:50px;
+}
+
+
+
+/* ============================= */
+/* RESPONSIVE MOVIL NETFLIX */
+/* ============================= */
+
+.mobile-click-card {
+    text-decoration: none;
+
+    color: white;
+}
+
+/* MOVIL */
+
+@media(max-width:768px) {
+
+    .movie-overlay {
+
+        opacity: 1;
+
+        background:
+            linear-gradient(to top,
+                rgba(0, 0, 0, 0.95) 10%,
+                rgba(0, 0, 0, 0.2) 100%);
+
+        padding: 15px;
+    }
+
+    .overlay-content {
+
+        transform: none;
+    }
+
+    /* OCULTAR BOTONES */
+
+    .movie-buttons {
+        display: none;
+    }
+
+    /* DESCRIPCIÓN MÁS PEQUEÑA */
+
+    .overlay-description {
+
+        font-size: 0.8rem;
+
+        -webkit-line-clamp: 2;
+    }
+
+    .overlay-content h3 {
+
+        font-size: 1rem;
+
+        margin-bottom: 10px;
+    }
+
+    .overlay-info {
+
+        gap: 8px;
+
+        margin-bottom: 10px;
+    }
+
+    .overlay-info span {
+
+        font-size: 0.75rem;
+
+        padding: 6px 10px;
+    }
+
+}
+
+
+
+/* ============================= */
+/* MODAL STREAMING */
+/* ============================= */
+
+.movie-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.3s;
+}
+
+.movie-modal.active {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.movie-modal-content {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    background: #111;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.close-modal {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+
+    background: #b20710;
+}
+
+.modal-video {
+
+    position: relative;
+
+    padding-bottom: 56.25%;
+
+    height: 0;
+}
+
+.modal-video iframe {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+}
+
+/* FAKE PLAYER */
+
+.fake-player {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.fake-player h2 {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+.fake-player p {
+
+    color: #ccc;
+
+    font-size: 1.1rem;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    .movie-modal-content {
+
+        width: 95%;
+
+        border-radius: 18px;
+    }
+
+    .close-modal {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 1rem;
+    }
+
+    .fake-player h2 {
+
+        font-size: 2rem;
+    }
+
+}
+
+
+/* =========================
+   TOAST NOTIFICATIONS
+========================= */
+
+.toast {
+
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    background: #e50914;
+
+    color: white;
+
+    padding: 16px 22px;
+
+    border-radius: 14px;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 0.4s;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.show-toast {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* =========================
+   PELÍCULAS SIMILARES
+========================= */
+
+.similar-section {
+
+    margin-top: 80px;
+
+}
+
+.similar-section h2 {
+
+    margin-bottom: 30px;
+
+    font-size: 2rem;
+
+}
+
+/* =========================
+   RESPONSIVE TOAST
+========================= */
+
+@media(max-width:768px) {
+
+    .toast {
+
+        right: 15px;
+        left: 15px;
+
+        bottom: 20px;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ============================= */
+/* INDICADOR FAVORITOS */
+/* ============================= */
+
+.favorite-indicator {
+
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 20;
+    border: 2px solid #ff0101;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ============================= */
+/* BOTÓN YA EN FAVORITOS*/
+/* ============================= */
+
+.favorite-added {
+    background: #2ecc71 !important;
+    color: white;
+    cursor: default;
+    opacity: 0.9;
+}
+
+
+/* ============================= */
+/* HEADER NUEVO */
+/* ============================= */
+.nav-left {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+/* ============================= */
+/* MENÚ CATEGORÍAS */
+/* ============================= */
+
+.categories-dropdown {
+
+    position: relative;
+
+}
+
+.categories-button {
+
+    background: #e50914;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.dropdown-content {
+
+    display: none;
+
+    position: absolute;
+
+    right: 0;
+
+    top: 55px;
+
+    width: 240px;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    background: #111;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.7);
+
+    z-index: 999;
+
+}
+
+.dropdown-content a {
+
+    display: block;
+
+    padding: 12px 15px;
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+.dropdown-content a:hover {
+
+    background: #e50914;
+
+}
+
+.show-dropdown {
+
+    display: block;
+
+}
+
+
+
+
+
+
+/* ============================= */
+/* HOME NETFLIX */
+/* ============================= */
+
+.home-categories {
+
+    padding: 40px;
+
+}
+
+.category-row {
+
+    margin-bottom: 60px;
+
+}
+
+.category-row h2 {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+/* SCROLL BONITO */
+
+.home-movie-row::-webkit-scrollbar {
+
+    height: 8px;
+
+}
+
+.home-movie-row::-webkit-scrollbar-thumb {
+
+    background: #e50914;
+
+    border-radius: 20px;
+
+}
+
+
+
+
+
+
+/* ============================= */
+/* HOME - FILAS TIPO NETFLIX */
+/* ============================= */
+
+.home-categories {
+    padding: 40px;
+    overflow: hidden;
+}
+
+.category-row {
+    margin-bottom: 60px;
+}
+
+.category-row h2 {
+    margin-bottom: 20px;
+}
+
+/* Fila horizontal de películas */
+.home-movie-row {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 5px 25px;
+}
+
+/* Tarjetas dentro del index */
+.home-movie-row .movie-card {
+    width: 260px;
+    min-width: 260px;
+    height: 340px;
+    flex-shrink: 0;
+}
+
+/* Imagen dentro de la tarjeta del index */
+.home-movie-row .movie-image-container,
+.home-movie-row .movie-image-container img {
+    height: 340px;
+}
+
+/* Scroll horizontal */
+.home-movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.home-movie-row::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.home-movie-row::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 20px;
+}
+
+/* ============================= */
+/* FIX IMÁGENES HOME NETFLIX */
+/* ============================= */
+
+.home-movie-row .movie-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.home-movie-row .movie-image-container img {
+    width: 100%;
+    height: 320%;
+    object-fit: cover;
+    display: block;
+}

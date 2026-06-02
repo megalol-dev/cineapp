@@ -1,0 +1,67 @@
+---
+/*
+Componente reutilizable para mostrar
+una película en formato tarjeta.
+
+Funciones:
+- Mostrar el póster de la película.
+- Mostrar información básica (título,
+  valoración y fecha).
+- Mostrar el overlay al pasar el ratón.
+- Acceso a la página de detalle.
+- Acceso directo a "Ver película".
+- Mostrar indicador de favoritos ❤️
+  cuando la película está en Mi Lista.
+
+Se utiliza en:
+- Página principal (index.astro).
+- Otras secciones que requieran
+  mostrar películas reutilizando el
+  mismo diseño visual.
+*/
+
+const { pelicula } = Astro.props;
+---
+
+<div class="movie-card mobile-click-card">
+    <div class="movie-image-container">
+        <div class="favorite-indicator" data-movie-id={pelicula.id}>❤️</div>
+
+        <img
+            src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`}
+            alt={pelicula.title}
+        />
+
+        <div class="movie-overlay">
+            <div class="overlay-content">
+                <h3>{pelicula.title}</h3>
+
+                <div class="overlay-info">
+                    <span>
+                        ⭐ {pelicula.vote_average.toFixed(1)}
+                    </span>
+
+                    <span>
+                        📅 {pelicula.release_date}
+                    </span>
+                </div>
+
+                <p class="overlay-description">
+                    {pelicula.overview?.slice(0, 120)}...
+                </p>
+
+                <div class="movie-buttons">
+                    <a href={`/pelicula/${pelicula.id}`} class="info-button">
+                        Ver info
+                    </a>
+
+                    <a href={`/pelicula/${pelicula.id}?autoplay=true`}
+                        class="watch-button"
+                    >
+                        ▶ Ver
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

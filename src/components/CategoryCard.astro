@@ -1,0 +1,17 @@
+---
+/*
+Componente reutilizable para mostrar una categoría de películas. 
+Funciones: 
+- Mostrar el nombre de la categoría. 
+- Generar el enlace a la página del género. 
+- Evitar duplicar código
+en el listado de categorías
+*/
+
+const { nombre, slug } = Astro.props;
+---
+<a href={`/categoria/${slug}`} class="category-link">
+    <div class="category-card">
+        <h2>{nombre}</h2>
+    </div>
+</a>
