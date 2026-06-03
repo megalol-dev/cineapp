@@ -32,6 +32,7 @@ Utilizado por:
 */
 export const prerender = false;
 import MainLayout from "../../layouts/MainLayout.astro";
+import HomeMovieCard from "../../components/HomeMovieCard.astro";
 
 /* =========================
    INTERFACES API TMDB
@@ -54,6 +55,9 @@ interface PeliculaSimilar {
     id: number;
     title: string;
     poster_path: string;
+    vote_average: number;
+    release_date: string;
+    overview: string;
 }
 
 /* =========================
@@ -172,26 +176,14 @@ const similares = similarData.results.slice(0, 6);
     }
 
     <!-- PELÍCULAS SIMILARES -->
-
-    <section class="similar-section">
-        <h2>🔥 También te puede gustar</h2>
-
-        <div class="movies-grid">
-            {
-                similares.map((peliculaSimilar: PeliculaSimilar) => (
-                    <a
-                        href={`/pelicula/${peliculaSimilar.id}`}
-                        class="movie-card"
-                    >
-                        <img
-                            src={`https://image.tmdb.org/t/p/w500${peliculaSimilar.poster_path}`}
-                            alt={peliculaSimilar.title}
-                        />
-                    </a>
-                ))
-            }
-        </div>
-    </section>
+    <h2>🔥 También te puede gustar</h2>
+    <div class="movies-grid">
+        {
+            similares.map((peliculaSimilar: PeliculaSimilar) => (
+                <HomeMovieCard pelicula={peliculaSimilar} />
+            ))
+        }
+    </div>
 
     <!-- MODAL STREAMING -->
 
@@ -300,17 +292,18 @@ const similares = similarData.results.slice(0, 6);
         }
 
         /* MODAL STREAMING */
-        const modal =
-            document.getElementById("movieModal")as HTMLDivElement;
+        const modal = document.getElementById("movieModal") as HTMLDivElement;
 
-        const openModal =
-            document.getElementById("openModal")as HTMLButtonElement;
+        const openModal = document.getElementById(
+            "openModal",
+        ) as HTMLButtonElement;
 
-        const closeModal =
-            document.getElementById("closeModal")as HTMLButtonElement;
+        const closeModal = document.getElementById(
+            "closeModal",
+        ) as HTMLButtonElement;
 
         /* AUTOPLAY */
-            if (window.location.search.includes("autoplay=true")) {
+        if (window.location.search.includes("autoplay=true")) {
             modal.classList.add("active");
 
             document.body.style.overflow = "hidden";
@@ -342,5 +335,4 @@ const similares = similarData.results.slice(0, 6);
             }
         });
     </script>
-    
 </MainLayout>
