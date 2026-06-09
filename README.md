@@ -20,18 +20,21 @@ Permite descubrir películas populares, realizar búsquedas en tiempo real, cons
 
 ### Hero
 El carrusel principal cambia automáticamente cada pocos segundos, destacando las películas más populares y recientes del catálogo.
+
 ![Hero](./imagenes/Hero.png)
 ---
 
 
 ### Categorías
 Sistema de categorías que permite filtrar el catálogo de películas por género, facilitando la exploración de contenido según los intereses del usuario.
+
 ![Categorias](./imagenes/Imagen_index.png)
 ---
 
 
 ### Búsqueda de películas
 Sistema de búsqueda por palabras clave que facilita encontrar películas relacionadas. El buscador incorpora validaciones para mejorar la experiencia de usuario, notificando de forma inmediata cuando se intenta realizar una búsqueda vacía.
+
 ![Buscador](./imagenes/Buscador.png)
 
 Sistema de búsqueda en funcionamiento utilizando la palabra clave "Kill". La aplicación consulta la API de TMDB y muestra automáticamente las películas relacionadas con el término introducido por el usuario.
@@ -46,6 +49,7 @@ Las tarjetas en pantallas grandes tiene un sistema hover que permite dar mucha i
 !imagenes/Informacion_dinamica.png
 
 Si el usuario accede a la ficha de una película, puede consultar información detallada, reproducir la película, añadirla a su lista de favoritos, visualizar el tráiler oficial y descubrir películas relacionadas que podrían resultar de su interés.
+
 Información:
 ![Ficha película](./imagenes/informacion_2.png)
 
@@ -58,6 +62,7 @@ Recomendaciones:
 
 ### Mi Lista
 El usuario puede crear una lista personalizada con sus películas favoritas. Además, mientras navega por la aplicación, podrá identificar fácilmente aquellas películas que ya ha guardado gracias al icono de corazón que aparece sobre ellas.
+
 ![Mi Lista](./imagenes/Mi_lista.png)
 
 ---
@@ -65,6 +70,7 @@ El usuario puede crear una lista personalizada con sus películas favoritas. Ade
 
 ### Diseño Responsive
 Toda la aplicación es completamente funcional en dispositivos móviles. Se ha desarrollado una versión responsive con un diseño minimalista y optimizado para pantallas táctiles, permitiendo al usuario acceder a todas las funcionalidades de la plataforma. Tanto el hero dinámico como el sistema de tarjetas, el buscador y la lista de favoritos mantienen su funcionamiento y accesibilidad en la versión móvil.
+
 ![Movil](./imagenes/movil.png)
 
 ---
