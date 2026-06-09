@@ -65,8 +65,7 @@ El usuario puede crear una lista personalizada con sus películas favoritas. Ade
 
 ### Diseño Responsive
 Toda la aplicación es completamente funcional en dispositivos móviles. Se ha desarrollado una versión responsive con un diseño minimalista y optimizado para pantallas táctiles, permitiendo al usuario acceder a todas las funcionalidades de la plataforma. Tanto el hero dinámico como el sistema de tarjetas, el buscador y la lista de favoritos mantienen su funcionamiento y accesibilidad en la versión móvil.
-![Movil](./imagenes/Movil.png)
-
+![Movil](./imagenes/movil.png)
 
 ---
 
