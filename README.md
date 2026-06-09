@@ -160,9 +160,7 @@ Durante el desarrollo se trabajaron conceptos como:
 ## ⚠️ Aviso
 
 Este proyecto utiliza datos proporcionados por la API de TMDB.
-
 Las imágenes, títulos y descripciones pertenecen a sus respectivos propietarios.
-
 Proyecto desarrollado únicamente con fines educativos y de portfolio.
 
 ---
@@ -170,10 +168,6 @@ Proyecto desarrollado únicamente con fines educativos y de portfolio.
 ## 👨‍💻 Autor
 
 José Luis Escudero Polo
-
 Desarrollador Junior Full Stack (DAW)
-
-GitHub: [Añadir enlace]
-
 LinkedIn: [Añadir enlace]
 
