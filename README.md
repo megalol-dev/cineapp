@@ -20,7 +20,7 @@ Permite descubrir películas populares, realizar búsquedas en tiempo real, cons
 
 ### Hero
 El carrusel principal cambia automáticamente cada pocos segundos, destacando las películas más populares y recientes del catálogo.
-!imagenes/Hero.png
+![Hero](./imagenes/Hero.png)
 ---
 
 
