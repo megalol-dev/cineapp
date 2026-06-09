@@ -126,7 +126,7 @@ main {
 }
 
 .main-content {
-    padding: 40px;
+    padding: 15px;
 }
 
 .home-search-section h2 {
@@ -1107,6 +1107,8 @@ main {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
+
+        
     }
 
     .movie-hero-detail {
@@ -1138,12 +1140,16 @@ main {
 
     .logo {
         order: 2;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
     }
 
     .categories-dropdown {
         order: 3;
+    }
+
+    .home-categories {
+        padding: 10px;
     }
 
 }
@@ -1155,10 +1161,12 @@ main {
 
 @media(max-width:768px) {
     .hero-slider {
-        height: 50vh;
+        height: 45vh;
     }
     .hero-overlay {
-        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+        padding: 15px;
     }
 
     .hero-content h1 {
@@ -1171,8 +1179,38 @@ main {
         line-height: 1.5;
     }
 
+    .hero-rank {
+        position: absolute;
+            top: 15px;
+            left: 15px;
+            margin: 0;
+    }
+
 }
 
+/* ============================= */
+/* RESPONSIVE HERO - Informacion especial */
+/* ============================= */
+@media(max-width:768px) {
+    .hero-content p {
+        display: none;
+    }
+            
+    .hero-stats {
+        display: none;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 8px;
+    }
+                
+    .hero-info-btn,
+    .hero-watch-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
 
 /* ============================= */
 /* RESPONSIVE MODAL */
@@ -1229,15 +1267,15 @@ main {
     }
 
     .home-categories .movie-card {
-        min-width: 140px;
-        width: 140px;
+        min-width: 110px;
+        width: 110px;
         flex-shrink: 0;
 
     }
 
     .home-categories .movie-image-container,
     .home-categories .movie-image-container img {
-        height: 220px;
+        height: 190px;
 
     }
 
@@ -1267,15 +1305,15 @@ main {
     }
 
     .movies-grid .movie-card {
-        min-width: 140px;
-        width: 140px;
+        min-width: 110px;
+        width: 110px;
         flex-shrink: 0;
     }
 
     .movies-grid .movie-image-container,
     .movies-grid .movie-image-container img,
     .movies-grid .movie-card img {
-        height: 220px;
+        height: 190px;
     }
 
     .movies-grid::-webkit-scrollbar {
@@ -1286,6 +1324,24 @@ main {
 
 
 /* =============================
+  Barra de buscar pelicula especifica
+============================= */
+@media(max-width:768px) {
+    .search-container form {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .search-container input {
+        width: 100%;
+    }
+    
+    .search-container button {
+        padding: 12px 16px;
+    }
+}
+
+/* =============================
    TARJETAS MÓVIL
 ============================= */
 
@@ -1294,6 +1350,8 @@ main {
     .movie-card {
         height: auto !important;
         overflow: visible;
+        min-width: 120px !important;
+        width: 120px !important;
     }
 
     .movie-image-container {
@@ -1302,7 +1360,7 @@ main {
     }
 
     .movie-image-container img {
-        height: 220px !important;
+        height: 190px !important;
     }
 
     .movie-overlay {
@@ -1319,8 +1377,8 @@ main {
         padding-top: 8px;
     }
 
-    /* Ocultar extras */
 
+    /* Ocultar extras */
     .overlay-info,
     .overlay-description {
         display: none !important;
@@ -1330,7 +1388,7 @@ main {
 
     .overlay-content h3 {
         display: block !important;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         text-align: center;
         min-height: 42px;
         margin: 8px 0;
@@ -1362,10 +1420,9 @@ main {
     @media(max-width:768px) {
     
         #favoritesGrid .movie-card {
-    
-            width: 140px !important;
-            min-width: 140px !important;
             flex-shrink: 0;
+            min-width: 110px !important;
+            width: 110px !important;
     
         }
     
