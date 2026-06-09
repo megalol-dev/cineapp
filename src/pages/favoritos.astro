@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
     <h1 class="section-title">❤️ Mi lista</h1>
 
-    <div class="movies-grid" id="favoritesGrid"></div>
+    <div class="movies-grid fixed-grid" id="favoritesGrid"></div>
 
     <script>
         const favoritesGrid = document.getElementById(
@@ -94,7 +94,5 @@ import MainLayout from "../layouts/MainLayout.astro";
                 location.reload();
             }
         });
-
     </script>
-    
 </MainLayout>

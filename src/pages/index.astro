@@ -145,8 +145,13 @@ const animacion: HeroPelicula[] = await obtenerGenero(16);
         <h2>Encuentra cualquier película</h2>
 
         <div class="search-container">
-            <form action="/busqueda" method="GET">
-                <input type="text" name="q" placeholder="Buscar película..." />
+            <form action="/busqueda" method="GET" id="search-form">
+                <input
+                    type="text"
+                    name="q"
+                    id="search-input"
+                    placeholder="Buscar película..."
+                />
 
                 <button type="submit"> Buscar </button>
             </form>
@@ -241,7 +246,6 @@ const animacion: HeroPelicula[] = await obtenerGenero(16);
 
     <script>
         const slides = document.querySelectorAll(".hero-slide");
-
         let currentSlide = 0;
 
         function cambiarSlide() {
@@ -259,7 +263,7 @@ const animacion: HeroPelicula[] = await obtenerGenero(16);
         setInterval(cambiarSlide, 6000);
 
         /* FAVORITOS */
-
+        /*--------------------------------------------------------------*/
         interface Favorito {
             id: string;
         }
@@ -279,6 +283,33 @@ const animacion: HeroPelicula[] = await obtenerGenero(16);
                     heart.style.display = "flex";
                 }
             });
+
+        /* BUCAR PELICULA */
+        /*--------------------------------------------------------------*/
+        const form = document.getElementById("search-form");
+        const input = document.getElementById("search-input");
+        const error = document.getElementById("search-error");
+
+        form?.addEventListener("submit", (e) => {
+            if (!(input instanceof HTMLInputElement)) {
+                return;
+            }
+
+            if (!input.value.trim()) {
+                e.preventDefault();
+                input.value = "⚠ Escribe una película antes de buscar";
+
+                input.style.color = "red";
+            }
+
+            input.addEventListener("focus", () => {
+                if (input.value === "⚠ Escribe una película antes de buscar") {
+                    input.value = "";
+
+                    input.style.color = "";
+                }
+            });
+        });
     </script>
     
 </MainLayout>

@@ -72,6 +72,24 @@ if(query){
 
     <h1 class="section-title">
         Resultados para: "{query}"
+        {
+            peliculas.length === 0 && (
+
+                <div class="no-results">
+
+                    <h2>
+                        🎬 No se encontraron resultados
+                    </h2>
+
+                    <p>
+                    Comprueba que el nombre esté escrito correctamente
+                    o explora nuestras categorías.
+                    </p>
+
+                </div>
+
+            )
+        }
     </h1>
 
     <div class="movies-grid">
