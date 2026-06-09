@@ -46,10 +46,9 @@ Las tarjetas en pantallas grandes tiene un sistema hover que permite dar mucha i
 !imagenes/Informacion_dinamica.png
 
 Si el usuario accede a la ficha de una película, puede consultar información detallada, reproducir la película, añadirla a su lista de favoritos, visualizar el tráiler oficial y descubrir películas relacionadas que podrían resultar de su interés.
-![detalle](./imagenes/informacion_2.png)
-!imagenes/informacion_2.png
-!imagenes/Trailer.png
-!imagenes/Relacionadas.png
+![Ficha película](./imagenes/informacion_2.png)
+![Trailer](./imagenes/Trailer.png)
+![Películas relacionadas](./imagenes/Relacionadas.png)
 
 
 ### Mi Lista
