@@ -13,8 +13,6 @@ Permite descubrir películas populares, realizar búsquedas en tiempo real, cons
 🔗 **Aplicación online:**
 [Añadir enlace del despliegue]
 
-🔗 **Repositorio GitHub:**
-[Añadir enlace del repositorio]
 
 ---
 
