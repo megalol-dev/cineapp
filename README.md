@@ -26,14 +26,13 @@ El carrusel principal cambia automáticamente cada pocos segundos, destacando la
 
 ### Categorías
 Sistema de categorías que permite filtrar el catálogo de películas por género, facilitando la exploración de contenido según los intereses del usuario.
-!imagenes/Imagen_index.png
-
+![Categorias](./imagenes/Imagen_index.png)
 ---
 
 
 ### Búsqueda de películas
 Sistema de búsqueda por palabras clave que facilita encontrar películas relacionadas. El buscador incorpora validaciones para mejorar la experiencia de usuario, notificando de forma inmediata cuando se intenta realizar una búsqueda vacía.
-!imagenes/Buscador.png
+![Buscador](./imagenes/Buscador.png)
 
 Sistema de búsqueda en funcionamiento utilizando la palabra clave "Kill". La aplicación consulta la API de TMDB y muestra automáticamente las películas relacionadas con el término introducido por el usuario.
 !imagenes/Imagen_index.png
@@ -54,7 +53,7 @@ Si el usuario accede a la ficha de una película, puede consultar información d
 
 ### Mi Lista
 El usuario puede crear una lista personalizada con sus películas favoritas. Además, mientras navega por la aplicación, podrá identificar fácilmente aquellas películas que ya ha guardado gracias al icono de corazón que aparece sobre ellas.
-!imagenes/Mi_lista.png
+![Mi Lista](./imagenes/Mi_lista.png)
 
 ---
 
