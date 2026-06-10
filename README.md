@@ -108,17 +108,18 @@ Para que la aplicación funcione correctamente es necesario disponer de una clav
 
 1. Crear una cuenta en TMDB
 Regístrate gratuitamente en: https://www.themoviedb.org/
+
 Una vez creada la cuenta, accede al panel de configuración y genera una API Key.
 
-2. Crear el archivo .env
+3. Crear el archivo .env
 En la raíz del proyecto crea un archivo llamado .env
 
-3. Añadir la clave de la API
+4. Añadir la clave de la API
 Dentro del archivo .env añade la siguiente variable:
 PUBLIC_TMDB_API_KEY="TU_API_KEY"
 Sustituye TU_API_KEY por la clave obtenida en TMDB.
 
-4. Ejecutar el proyecto
+5. Ejecutar el proyecto
 Instala las dependencias y ejecuta el servidor de desarrollo:
 npm install
 npm run dev
@@ -126,7 +127,7 @@ npm run dev
 La aplicación utilizará automáticamente la clave configurada para obtener la información de películas desde la API de TMDB.
 
 Importante: 
-El archivo .env está incluido en .gitignore para evitar publicar claves privadas en      GitHub. Cada desarrollador deberá utilizar su propia API Key.
+El archivo .env está incluido en .gitignore para evitar publicar claves privadas en GitHub. Cada desarrollador deberá utilizar su propia API Key.
 
 Tienes un archivo llamado .env.example para guiarte y crear tu propio arvhico .env
 
