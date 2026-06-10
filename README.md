@@ -100,36 +100,57 @@ Toda la aplicación es completamente funcional en dispositivos móviles. Se ha d
 
 ### APIs
 
-* TMDB (The Movie Database API)
+* **TMDB (The Movie Database API)**
 
-Configuración de la API
+### Configuración de la API
 
-Para que la aplicación funcione correctamente es necesario disponer de una clave de acceso a la API de The Movie Database (TMDB).
+Para que la aplicación funcione correctamente es necesario disponer de una clave de acceso a la API de **The Movie Database (TMDB)**.
 
-1. Crear una cuenta en TMDB
-Regístrate gratuitamente en: https://www.themoviedb.org/
+#### 1. Crear una cuenta en TMDB
 
-Una vez creada la cuenta, accede al panel de configuración y genera una API Key.
+Regístrate gratuitamente en:
 
-3. Crear el archivo .env
-En la raíz del proyecto crea un archivo llamado .env
+```text
+https://www.themoviedb.org/
+```
 
-4. Añadir la clave de la API
-Dentro del archivo .env añade la siguiente variable:
+Una vez creada la cuenta, accede al panel de configuración y genera una **API Key**.
+
+#### 2. Crear el archivo `.env`
+
+En la raíz del proyecto crea un archivo llamado:
+
+```text
+.env
+```
+
+#### 3. Añadir la clave de la API
+
+Dentro del archivo `.env` añade la siguiente variable:
+
+```env
 PUBLIC_TMDB_API_KEY="TU_API_KEY"
-Sustituye TU_API_KEY por la clave obtenida en TMDB.
+```
 
-5. Ejecutar el proyecto
+Sustituye `TU_API_KEY` por la clave obtenida en TMDB.
+
+#### 4. Ejecutar el proyecto
+
 Instala las dependencias y ejecuta el servidor de desarrollo:
+
+```bash
 npm install
 npm run dev
+```
 
 La aplicación utilizará automáticamente la clave configurada para obtener la información de películas desde la API de TMDB.
 
-Importante: 
-El archivo .env está incluido en .gitignore para evitar publicar claves privadas en GitHub. Cada desarrollador deberá utilizar su propia API Key.
+### Importante
 
-Tienes un archivo llamado .env.example para guiarte y crear tu propio arvhico .env
+El archivo `.env` está incluido en `.gitignore` para evitar publicar claves privadas en GitHub. Cada desarrollador deberá utilizar su propia API Key.
+
+Además, el proyecto incluye un archivo `.env.example` que sirve como guía para crear tu propio archivo `.env`.
+
 
 ### Herramientas
 
