@@ -72,6 +72,8 @@ Toda la aplicación es completamente funcional en dispositivos móviles. Se ha d
 
 ![Movil](./imagenes/movil.png)
 
+![Movil](./imagenes/movil2.png)
+
 ---
 
 ## ✨ Funcionalidades

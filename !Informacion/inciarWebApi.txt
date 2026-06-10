@@ -1,5 +1,14 @@
-// para inciar astro escribe en consola:
-npm run dev
 
-// una vez todo inicie debe escribir en el navegador:
-http://localhost:4321
+MODO DESARROLLADOR{
+    // Para inciar astro escribe en consola:
+    npm run dev
+
+    // Una vez todo inicie debe escribir en el navegador:
+    http://localhost:4321
+}
+
+WEB DESPLEGADA{
+    // Escribe en el navegador
+    https://cineapp-jose.netlify.app/
+}
+    
