@@ -232,4 +232,18 @@ Proyecto desarrollado únicamente con fines educativos y de portfolio.
 José Luis Escudero Polo
 Desarrollador Junior Full Stack (DAW)
 
+---
+
+# 📫 Contacto
+
+📧 Email: **escuderopolojoseluis@gmail.com**
+
+🌐 Portfolio: https://megalol-dev.github.io/
+
+💼 LinkedIn: https://linkedin.com/in/jose-luis-escudero-polo
+
+
+📺 YouTube: https://www.youtube.com/@Megalol-dev
+
+---
 
