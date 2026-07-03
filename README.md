@@ -242,5 +242,4 @@ Desarrollador Junior Full Stack (DAW)
 
 💼 LinkedIn: https://linkedin.com/in/jose-luis-escudero-polo
 
-
 📺 YouTube: https://www.youtube.com/@Megalol-dev
